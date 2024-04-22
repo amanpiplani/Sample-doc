@@ -1,0 +1,18 @@
+.full-key {
+  border-left: 1px solid #d9e0eb;
+  padding-top: 5px;
+}
+
+.body-key {
+  font-weight: 600;
+  display: inline;
+}
+
+.body-value {
+    color: #262626b3;
+}
+
+.minus {
+    font-weight: 100;
+    color: #d9e0eb;
+}

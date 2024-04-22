@@ -1,0 +1,17 @@
+{
+  "live": {
+    "knock": true,
+    "record": true,
+    "audio": true,
+    "guest_video": true
+  },
+  "cobrowse": {
+    "record": true
+  },
+  "support": {
+    "record": true,
+    "prerequestrc": true,
+    "prerequestadmin": true
+  },
+  "replay": {}
+}

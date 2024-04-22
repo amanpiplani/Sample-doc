@@ -1,0 +1,64 @@
+{
+  "session": {
+    "id": "string",
+    "sid": 0,
+    "ExternalUserId": 0,
+    "OrganizationId": 0,
+    "provider": "string",
+    "providerExternalId": "string",
+    "name": "string",
+    "CustomerId": 0,
+    "roles": {
+      "api": true,
+      "agent": true,
+      "supervisor": true,
+      "group_admin": true
+    },
+    "features": null,
+    "startedAt": "string",
+    "expiresAt": "string",
+    "lastActiveAt": "string",
+    "isActive": true,
+    "clientApp": null,
+    "userAgent": "string",
+    "remoteIp": "string",
+    "createdAt": "string",
+    "updatedAt": "string"
+  },
+  "org": {
+    "provider": "string",
+    "name": "string",
+    "externalId": "string",
+    "id": 0,
+    "CustomerId": 0
+  },
+  "user": {
+    "name": "string",
+    "email": "string",
+    "externalId": "string",
+    "id": 0
+  },
+  "roles": {
+    "api": true,
+    "agent": true,
+    "supervisor": true,
+    "group_admin": true
+  },
+  "products": {
+    "live": {
+      "knock": true,
+      "record": true,
+      "audio": true,
+      "guest_video": true
+    },
+    "cobrowse": {
+      "record": true
+    },
+    "support": {
+      "record": true,
+      "prerequestrc": true,
+      "prerequestadmin": true
+    },
+    "data": {}
+  }
+}

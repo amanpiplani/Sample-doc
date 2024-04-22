@@ -1,0 +1,58 @@
+{
+  "count": 0,
+  "rows": [
+    {
+      "id": "string",
+      "pin": 0,
+      "ExternalUserId": 0,
+      "OrganizationId": 0,
+      "userDescription": "string",
+      "label": "string",
+      "status": "string",
+      "type": "string",
+      "hostAuthToken": "string",
+      "expiresAt": "string",
+      "startTime": null,
+      "createdByAgentSession": {
+        "sid": 0,
+        "roles": {
+          "api": true,
+          "agent": true,
+          "supervisor": true,
+          "group_admin": true
+        },
+        "features": null,
+        "provider": "string",
+        "remoteIp": "string",
+        "clientApp": null,
+        "expiresAt": "string",
+        "startedAt": "string",
+        "userAgent": "string",
+        "providerExternalId": "string"
+      },
+      "servers": {
+        "live": {
+          "id": 0,
+          "region": "string",
+          "endpoint": "string",
+          "serverInstanceId": "string"
+        }
+      },
+      "metaData": null,
+      "settings": {
+        "audio": true,
+        "knock": true,
+        "recording": true,
+        "guest_video": true,
+        "startwithrc": true,
+        "startwithadmin": true
+      },
+      "stats": null,
+      "unattended": true,
+      "scheduled": true,
+      "parentSessionId": null,
+      "createdAt": "string",
+      "updatedAt": "string"
+    }
+  ]
+}

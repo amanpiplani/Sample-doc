@@ -1,0 +1,52 @@
+.status-active {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: #fff;
+  font-weight: 700;
+  display: inline;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.status-200-active {
+  background-color: #05b870;
+}
+
+.status-403-active {
+  background-color: #f46d2a;
+}
+
+.status-403 {
+  color: #f46d2a;
+  display: inline;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.status-200 {
+  color: #05b870;
+  display: inline;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.heading-bar {
+  padding: 25px 0;
+}
+
+.responses-heading {
+  font-size: 20px;
+  font-weight: 700;
+  display: inline;
+}
+
+.status-buttons {
+  display: inline;
+  padding-left: 40px;
+}

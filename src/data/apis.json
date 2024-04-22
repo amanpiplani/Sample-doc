@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": "123",
+      "displayName": "Get current user account information",
+      "url": "https://api-v3.screenmeet.com/v3/me",
+      "servers": [
+        {
+          "type": "PROD",
+          "url": "https://api-v3.screenmeet.com/v3/me"
+        },
+        {
+          "type": "mockServer",
+          "url": "https://stoplight.io/mocks/screenmeet/screenmeet/64386655/me"
+        }
+      ],
+			"parameters": ["Authorization"],
+      "method": "GET",
+      "detailsText": ["Get user information for currently authenticated user."],
+      "files": {
+        "success": "currentUser.json",
+        "error": "currentUserError.json"
+      }
+    },
+    {
+      "id": "234",
+      "displayName": "Get products and options",
+      "url": "https://api-v3.screenmeet.com/v3/products",
+			"servers": [
+        {
+          "type": "PROD",
+          "url": "https://api-v3.screenmeet.com/v3/products"
+        },
+        {
+          "type": "mockServer",
+          "url": "https://stoplight.io/mocks/screenmeet/screenmeet/64386655/products"
+        }
+      ],
+			"parameters": ["Authorization"],
+      "method": "GET",
+      "detailsText": [
+        "Get available products and options for authenticated user."
+      ],
+      "files": {
+        "success": "getProducts.json",
+        "error": "getProductsError.json"
+      }
+    },
+    {
+      "id": "345",
+      "displayName": "Retrieve console sign-on magic URL",
+      "url": "https://api-v3.screenmeet.com/v3/auth/consoleSessionToken",
+			"servers": [
+        {
+          "type": "PROD",
+          "url": "https://api-v3.screenmeet.com/v3/products"
+        },
+        {
+          "type": "mockServer",
+          "url": "https://stoplight.io/mocks/screenmeet/screenmeet/64386655/auth/consoleSessionToken"
+        }
+      ],
+			"method": "GET",
+      "detailsText": [
+        "Retrieve a magic url to automatically sign-in to ScreenMeet console as the currently authenticated user.",
+        "Claim for 'role_agent' value must be set to 'true'.",
+        "The URL must be used to sign-in within 60 seconds or the console login token will expire."
+      ],
+      "files": {
+        "success": "retrieveSignOn.json",
+        "error": "retrieveSignOnError.json"
+      }
+    },
+    {
+      "id": "456",
+      "displayName": "Retrieve open sessions for agent",
+      "url": "https://api-v3.screenmeet.com/v3/supportsessions",
+      "method": "GET",
+			"servers": [
+        {
+          "type": "PROD",
+          "url": "https://api-v3.screenmeet.com/v3/products"
+        },
+        {
+          "type": "mockServer",
+          "url": "https://stoplight.io/mocks/screenmeet/screenmeet/64386655/supportsessions"
+        }
+      ],
+			"detailsText": [
+        "Returns a list of the sessions for current agent that are in open or active state. Scheduled sessions will not be included unless you include the 'scheduled' query parameter - ('scheduled=1')."
+      ],
+      "files": {
+        "success": "retrieveOpenSessions.json",
+        "error": "retrieveOpenSessionsError.json"
+      }
+    }
+  ]
+}
