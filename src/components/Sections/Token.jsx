@@ -5,6 +5,42 @@ const Token = () => {
   "expires_in": 3600,
   "scope":"scopes of APIs"
    }
+   const exampleCode = `
+const crypto = require('crypto');
+const { v4: uuidv4 } = require('uuid');
+
+function base64UrlEncode(data) {
+  return Buffer.from(data).toString('base64').replace(/=/g, '').replace(/\\+/g, '-').replace(/\//g, '_');
+}
+
+function generateJWT(header, payload, secret) {
+  const encodedHeader = base64UrlEncode(JSON.stringify(header));
+  const encodedPayload = base64UrlEncode(JSON.stringify(payload));
+  const signature = crypto.createHmac('sha256', secret).update(encodedHeader + '.' + encodedPayload).digest('base64');
+
+  return encodedHeader + '.' + encodedPayload + '.' + signature;
+}
+
+const currentTime = new Date()
+const epochTimeInSeconds = Math.floor(currentTime.getTime() / 1000);
+
+const currentTimeInMilliseconds = new Date().getTime();
+const oneHourInMilliseconds = 60 * 60 * 1000;
+const newTimeInMilliseconds = currentTimeInMilliseconds + oneHourInMilliseconds;
+const newTimeInSeconds = Math.floor(newTimeInMilliseconds / 1000);
+
+// Example usage:
+const header = { "alg": "RS256", "typ": "JWT","kid":"02c3d8bb-e665-4759-bca9-69798e5b6af0" };
+const requestBody = {
+  requestId: uuidv4(),
+  //other field of request body
+}
+const payload = { "jti": requestBody.requestId, "iat": epochTimeInSeconds, "iat": newTimeInSeconds,"content_hash": createHash('sha256').update(JSON.stringify(requestBody)).digest('base64')};
+const secret = privateKey; //Add private key
+
+const token = generateJWT(header, payload, secret);
+console.log(token);
+`;
   return (
     <div className='main'>
       <h1>Real-time API Access & Security</h1>
@@ -166,10 +202,11 @@ const Token = () => {
     </div>
     <h3>Format Example</h3>
     <p>JWTHeader.JWTClaims.JWT Signature</p>
-
-
-
-
+    <div style={{ backgroundColor: '#f0f0f0', padding: '20px', borderRadius: '5px', fontFamily: 'monospace', whiteSpace: 'pre-wrap' }}>
+      <code>
+        {exampleCode}
+      </code>
+    </div>
     </div>
   );
 }

@@ -53,7 +53,6 @@ function App() {
         }
       </div>
       <div className='api-details'>
-        {console.log("-----",screenHandler)}
         {!screenHandler && !rerender && <ApiDetails apiDetails={activeApi} />}
         {screenHandler == "overview" && <Overview/>}
         {screenHandler == "auth" && <Authorization/>}
