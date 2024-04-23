@@ -15,7 +15,7 @@ function App() {
   const [screenHandler,setscreenHandler] = useState("overview")
 
   const apiClickHandler = (apiDetails) => {
-    if (activeApi.id === apiDetails.id) return;
+    setscreenHandler("")
     setActiveApi(apiDetails);
     setRerender(true);
   };
@@ -53,6 +53,7 @@ function App() {
         }
       </div>
       <div className='api-details'>
+        {console.log("-----",screenHandler)}
         {!screenHandler && !rerender && <ApiDetails apiDetails={activeApi} />}
         {screenHandler == "overview" && <Overview/>}
         {screenHandler == "auth" && <Authorization/>}
